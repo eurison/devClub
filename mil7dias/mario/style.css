@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.logo_mario {
+  height: 30vh;
+}
+button {
+  margin-top: 20px;
+  background-color: red;
+  color: #fff;
+  padding: 10px;
+  width: 30vh;
+  height: 6vh;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-width: bold
+}
+button:hover {
+  font-size: 16px;
+  color: #fff;
+  background-color: green;
+  transition: 0.3s linear
+}
+
+p {
+  color: #fff;
+}
+
+body {
+ height: 100vh;
+}
+
+.container_header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 30px;
+
+}
+
+.container_header img {
+  height: 60px;
+
+}
+
+.container_header a {
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.container_header a:hover {
+  color: red;
+  font-size: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.mario_bros {
+  height: 500px;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px;
+  height: 100vh;
+}
+
+.containerLogo{
+ width: 40%;
+ border: 1px solid red; 
+}
+
+.containerMario {
+  border: 1px solid green;
+}
+
+.container_video {
+  position: fixed;
+  top: 0;
+  z-index: -1; /* o video vai para traz da tela*/
+}
+
+video{
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.mascara {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 50%, rgba(10, 12, 16, 0.99) 85%);
+  position: fixed;
+  top: 0;
+}
+
+.link_whattsapp img {
+  height: 100px;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.form_contact {
+  background-color: #fff;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  position: fixed;
+  padding: 20px;
+  border-radius:8px;
+  /* move to center the form */
+  top: 30%;
+  left: -20%;
+  
+}
+.title {
+  margin-left: 40%;
+  border: 1px solid red;
+  height: 60px;
+  width: 60px;
+}
+
+input {
+  height: 35px;
+  border-radius: 8px;
+  border: 0.5px solid red;
+  padding-left: 5px; 
+  outline-color: red;
+}
+
+textarea {
+  height: 100px;
+  border-radius: 8px;
+  border: 0.5px solid red;
+  padding-left: 5px;
+  padding-top: 5px;
+  outline-color: red;
+}
+input, textarea:hover {
+}
+
+.mascara_form {
+  /* oculta o fundo da mascara */
+  visibility: hidden;
+
+  position: fixed;
+  top: 0%;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(109deg, rgba(10, 12, 16, 0.99) 15%, rgba(10, 12, 16, 0.7) 60%, rgba(10, 12, 16, 0.99) 90%);
+  transition: visibility 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  p {
+    display: none;
+  }
+  .container_header {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .mario_bros {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .container_header img {
+    width: 80vw;
+    height: auto;
+  }
+}
