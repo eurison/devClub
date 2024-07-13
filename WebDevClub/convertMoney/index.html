@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Convert Money</title>
+</head>
+<body>
+  <h1>Convert Money</h1>
+  <main>
+    <label>
+      convert <b>from</b>
+      <select>
+        <option value="">R$ REAL BRASILEIRO</option>
+        <!-- <option value="">US$ DOLLAR AMERICAN</option>
+        <option value="">€ EURO</option>
+        <option value="">₿ BITCOIN</option> -->
+      </select>
+    </label>
+    <label>
+      convert <b> to</b>
+      <select class="currency-select">
+        <option value="dollar">US$ DOLLAR AMERICAN</option>
+        <option value="real">R$ REAL BRASILEIRO</option>
+        <option value="euro">€ EURO</option>
+        <option value="libra">£ LIBRA</option>
+        <option value="bitcoin">₿ BITCOIN</option>
+      </select>
+    </label>
+    <label>
+      value the <b>moeda</b>
+      <input class="input-currency" placeholder="10.000,00">
+    </label>
+
+    <button class="convert-button" >Convert</button>
+
+    <section class="result">
+      <div class="currency-box">
+        <img src="./assets/real.png" alt="real Brasileiro">
+        <p class="currency">Real</p>
+        <p class="currency-value-to-convert">R$ 00,00</p>
+      </div>
+
+      <div>
+        <img class="arrowDown" src="./assets/Green_Arrow_Down.svg" alt="arrow down">
+      </div>
+
+      <div class="currency-box">
+        <img class="currency-img" src="./assets/eua.png" alt="dollar">
+        <p class="currency" id="currency-name">Dollar</p>
+        <p class="currency-value">$ 00,00</p>
+      </div>
+    </section>
+</main>
+
+</body>
+<script src="./script.js"></script>
+</html>

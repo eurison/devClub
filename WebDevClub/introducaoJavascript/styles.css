@@ -1,0 +1,15 @@
+button {
+  border-radius: 6px;
+  border: none;
+  color: #fff;
+  background-color: #000f0f;
+  width: 20vw;
+  height: 3vh;
+}
+input {
+  width: 350px;
+  height: 1.5rem;
+  border: gray solid;
+  border-radius: 6px;
+  
+}
