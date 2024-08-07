@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>procurar contato com um FOREACH</h2>
+    <input type="text" placeholder="digite o nome do contato." />
+    <p></p>
+    <button onclick="search()">procurar contato</button>
+  </body>
+  <script>
+    // let p = document.querySelector("p")
+    // let input = document.querySelector("input")
+
+    const users = [
+      { name: "João", age: 23, number: "123456789" },
+      { name: "Maria", age: 23, number: "987654321" },
+      { name: "Antônio", age: 23, number: "456789123" },
+      { name: "Margarida", age: 23, number: "789123456" },
+      { name: "Joaquim", age: 23, number: "321456987" },
+      { name: "Jorge", age: 23, number: "654123789" },
+      { name: "Ana", age: 23, number: "987456321" },
+    ]
+
+    users.forEach((item, index) => {
+      console.log(
+        `${index + 1} Nome: ${item.name} Idade: ${item.age} Número: ${
+          item.number
+        }`
+      )
+    })
+  </script>
+</html>

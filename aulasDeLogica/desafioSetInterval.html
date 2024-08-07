@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contador de tempo</title>
+  </head>
+  <body style="background-color: black">
+    <h1 style="color: white">0</h1>
+    <button style="padding: 10px; height: 30px; width: 100px" onclick="stop()">
+      Stop
+    </button>
+    <button style="padding: 10px; height: 30px; width: 100px" onclick="start()">
+      Start
+    </button>
+  </body>
+  <script>
+    let number = 0
+    let cron
+    let h1 = document.querySelector("h1")
+
+    function start() {
+      cron = setInterval(() => {
+        h1.innerHTML = number
+        number++
+      }, 1000)
+    }
+
+    function stop() {
+      clearInterval(cron)
+    }
+  </script>
+</html>

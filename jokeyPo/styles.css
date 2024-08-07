@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: gray;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttons {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 40px;
+}
+
+button {
+  padding: 10px;
+  font-size: 50px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+button:hover {
+  padding: 11px;
+  font-size: 52px;
+  opacity: 0.7;
+}
+
+#rock {
+  background-color: blue;
+}
+#paper {
+  background-color: gray;
+}
+#scissors {
+  background-color: green;
+}
+
+p {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.your-score span {
+  color: blue;
+}
+.machine-score span {
+  color: red;
+}

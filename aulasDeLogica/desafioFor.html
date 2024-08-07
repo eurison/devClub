@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>procurar contato com um FOR</h2>
+    <input type="text" placeholder="digite o nome do contato." />
+    <p></p>
+    <button onclick="search()">procurar contato</button>
+  </body>
+  <script>
+    let p = document.querySelector("p")
+    let input = document.querySelector("input")
+
+    const contacts = [
+      { name: "João", number: "123456789" },
+      { name: "Maria", number: "987654321" },
+      { name: "Antônio", number: "456789123" },
+      { name: "Margarida", number: "789123456" },
+      { name: "Joaquim", number: "321456987" },
+      { name: "Jorge", number: "654123789" },
+      { name: "Ana", number: "987456321" },
+    ]
+
+    function search() {
+      console.log(input.value)
+      for (let i = 0; i < contacts.length; i++) {
+        if (
+          input.value.toLocaleLowerCase() ===
+            contacts[i].name.toLocaleLowerCase() ||
+          input.value === contacts[i].number
+        ) {
+          p.innerHTML = `Nome encontrado: ${contacts[i].name}<br> number: ${contacts[i].number}`
+          break
+        } else if (input.value === "") {
+          alert("digite o nome do contato ou o número.")
+          return
+        } else {
+          p.innerHTML = "Contato não encontrado."
+        }
+      }
+    }
+
+    // function search() {
+    //   // console.log(input.value)
+    //   for (let i = 0; i < contacts.length; i++) {
+    //     if (
+    //       input.value.toLocaleLowerCase() ===
+    //         contacts[i].name.toLocaleLowerCase() ||
+    //       input.value === contacts[i].number
+    //     ) {
+    //       // console.log(contacts[i])
+    //       p.innerHTML = `Nome encontrado: ${contacts[i].name}<br> number: ${contacts[i].number}`
+    //       break
+    //     } else {
+    //       p.innerHTML = "Contato não encontrado."
+    //     }
+    //   }
+    // }
+  </script>
+</html>
